@@ -51,3 +51,23 @@ document.getElementById('bici').innerHTML =
 // cui elementi sono sempre degli oggetti 
 // che contengono solo nomi e falli subiti. Stampiamo tutto in console.
 
+const squadre = [
+    {nome : 'Inter', punti: 0, falli: 0},
+    {nome : 'Milan', punti: 0, falli: 0},
+    {nome : 'Juventus', punti: 0, falli: 0},
+    {nome : 'verona', punti: 0, falli: 0},
+    {nome : 'napoli', punti: 0, falli: 0},
+    {nome : 'sassuolo', punti: 0, falli: 0}
+];
+
+const random = (min, max) => Math.floor(Math.random() * (max - min + 1) ) + min;
+
+const array = [];
+
+for(let i=0; i<squadre.length; i++){
+    let{nome,falli} = squadre[i];
+    falli = random(1,5);
+    array.push({nome,falli});
+}
+
+console.log(array);
